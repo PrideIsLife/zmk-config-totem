@@ -9,7 +9,7 @@
 / {
     chosen {
         zmk,kscan = &kscan0;
-        zmk,matrix_transform = &default_transform;
+        zmk,physical-layout = &totem_physical_layout;
     };
 
     default_transform: keymap_transform_0 {
@@ -42,3 +42,5 @@
             ;
     };
 };
+
+#include "totem-layouts.dtsi"
