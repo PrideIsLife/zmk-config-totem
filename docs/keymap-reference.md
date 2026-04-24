@@ -1,5 +1,7 @@
 # TOTEM Graphite+Miryoku Keymap Reference
 
+Miryoku-style layout with Graphite alphas and urob's timer-less home row mods.
+
 ## Base Layer (Graphite)
 
 ```
@@ -10,48 +12,46 @@
   ┌──────┼─────┼─────┼─────┼─────┼─────┤   ├─────┼─────┼─────┼─────┼─────┼──────┐
   │ TAB  │  Q  │  X  │  M  │  C  │  V  │   │  K  │  P  │ , ; │ . : │ ? ! │ ESC  │
   └──────┴─────┴─────┼─────┼─────┼─────┤   ├─────┼─────┼─────┼─────┴─────┴──────┘
-                     │ DEL │NAV/ │1-Sft│   │ RET │SYM/ │FUN/ │
-                     │     │Space│     │   │     │Bspc │ Tab │
+                     │ ESC │NAV/ │SYM/ │   │NUM/ │FUN/ │ DEL │
+                     │     │Space│ Tab │   │ Ret │Bspc │     │
                      └─────┴─────┴─────┘   └─────┴─────┴─────┘
 ```
 
-### Home Row Mods (hold the key instead of tapping)
+### Home Row Mods (hold = modifier, tap = letter)
 
-| Key | Tap | Hold |
-|-----|-----|------|
-| Left pinky (home) | N | Ctrl |
-| Left ring (home) | R | Alt |
-| Left middle (home) | T | Gui/Super |
-| Left index (home) | S | Shift |
-| Right index (home) | H | Shift |
-| Right middle (home) | A | Gui/Super |
-| Right ring (home) | E | Alt |
-| Right pinky (home) | I | Ctrl |
+| Key | Hold |
+|-----|------|
+| N / I | Ctrl |
+| R / E | Alt |
+| T / A | Gui (Super) |
+| S / H | Shift |
 
-These use urob's timer-less config: they won't misfire during fast typing.
+Uses urob's timer-less config — won't misfire during fast typing.
 
 ### Thumb Keys
 
 | Position | Tap | Hold |
 |----------|-----|------|
-| Left outer | DEL | — |
-| Left middle | Space | NAV layer |
-| Left inner | — | One-shot Shift |
-| Right inner | Enter | — |
-| Right middle | Backspace | SYM layer |
-| Right outer | Tab | FUN layer |
+| Left outer | Esc | — |
+| Left middle | Space | **NAV** layer |
+| Left inner | Tab | **SYM** layer |
+| Right inner | Enter | **NUM** layer |
+| Right middle | Backspace | **FUN** layer |
+| Right outer | Delete | — |
 
-### Mod-Morphs (shifted behavior)
+### Mod-Morphs
 
-| Key | Normal | With Shift |
-|-----|--------|------------|
-| Bottom row right 3rd | , | ; |
-| Bottom row right 4th | . | : |
-| Bottom row right 5th | ? | ! |
+| Key | Normal | Shifted |
+|-----|--------|---------|
+| Bottom row 3rd from right | , | ; |
+| Bottom row 2nd from right | . | : |
+| Bottom row rightmost | ? | ! |
 
 ---
 
-## NAV Layer (hold left middle thumb)
+## NAV Layer (hold left middle thumb — Space)
+
+Right hand: navigation. Left hand: modifiers for Ctrl/Shift+arrows etc.
 
 ```
          ┌─────┬─────┬─────┬─────┬─────┐   ┌─────┬─────┬─────┬─────┬─────┐
@@ -61,17 +61,15 @@ These use urob's timer-less config: they won't misfire during fast typing.
   ┌──────┼─────┼─────┼─────┼─────┼─────┤   ├─────┼─────┼─────┼─────┼─────┼──────┐
   │      │     │     │     │     │     │   │     │     │     │     │     │      │
   └──────┴─────┴─────┼─────┼─────┼─────┤   ├─────┼─────┼─────┼─────┴─────┴──────┘
-                     │     │▓▓▓▓▓│     │   │ RET │Bspc │ DEL │
+                     │ Esc │▓▓▓▓▓│ Tab │   │ Ret │Bspc │ Del │
                      └─────┴─────┴─────┘   └─────┴─────┴─────┘
 ```
 
-Left hand has mods so you can do Ctrl+Arrow, Shift+Home, etc.
-
 ---
 
-## NUM Layer (hold left middle thumb + right middle thumb → conditional)
+## NUM Layer (hold right inner thumb — Enter)
 
-Activated via the SYM layer thumb — it's a standalone layer.
+Left hand: numpad layout. Right hand: modifiers.
 
 ```
          ┌─────┬─────┬─────┬─────┬─────┐   ┌─────┬─────┬─────┬─────┬─────┐
@@ -81,13 +79,15 @@ Activated via the SYM layer thumb — it's a standalone layer.
   ┌──────┼─────┼─────┼─────┼─────┼─────┤   ├─────┼─────┼─────┼─────┼─────┼──────┐
   │      │  -  │  1  │  2  │  3  │  /  │   │     │     │     │     │     │      │
   └──────┴─────┴─────┼─────┼─────┼─────┤   ├─────┼─────┼─────┼─────┴─────┴──────┘
-                     │  .  │Space│  ;  │   │     │▓▓▓▓▓│     │
+                     │  .  │Space│  ;  │   │▓▓▓▓▓│Bspc │ Del │
                      └─────┴─────┴─────┘   └─────┴─────┴─────┘
 ```
 
 ---
 
-## SYM Layer (hold right middle thumb)
+## SYM Layer (hold left inner thumb — Tab)
+
+Left hand: symbols. Right hand: modifiers.
 
 ```
          ┌─────┬─────┬─────┬─────┬─────┐   ┌─────┬─────┬─────┬─────┬─────┐
@@ -97,13 +97,15 @@ Activated via the SYM layer thumb — it's a standalone layer.
   ┌──────┼─────┼─────┼─────┼─────┼─────┤   ├─────┼─────┼─────┼─────┼─────┼──────┐
   │      │  |  │  !  │  @  │  #  │     │   │     │     │     │     │     │      │
   └──────┴─────┴─────┼─────┼─────┼─────┤   ├─────┼─────┼─────┼─────┴─────┴──────┘
-                     │  (  │  )  │  _  │   │     │▓▓▓▓▓│     │
+                     │  (  │  )  │▓▓▓▓▓│   │ Ret │Bspc │ Del │
                      └─────┴─────┴─────┘   └─────┴─────┴─────┘
 ```
 
 ---
 
-## FUN Layer (hold right outer thumb)
+## FUN Layer (hold right middle thumb — Backspace)
+
+Left hand: F-keys. Right hand: modifiers.
 
 ```
          ┌─────┬─────┬─────┬─────┬─────┐   ┌─────┬─────┬─────┬─────┬─────┐
@@ -113,13 +115,13 @@ Activated via the SYM layer thumb — it's a standalone layer.
   ┌──────┼─────┼─────┼─────┼─────┼─────┤   ├─────┼─────┼─────┼─────┼─────┼──────┐
   │      │ F10 │ F1  │ F2  │ F3  │Pause│   │     │     │     │     │     │      │
   └──────┴─────┴─────┼─────┼─────┼─────┤   ├─────┼─────┼─────┼─────┴─────┴──────┘
-                     │     │Space│ Tab │   │     │     │▓▓▓▓▓│
+                     │ App │Space│ Tab │   │     │     │▓▓▓▓▓│
                      └─────┴─────┴─────┘   └─────┴─────┴─────┘
 ```
 
 ---
 
-## UTIL Layer (hold NAV + SYM thumbs simultaneously)
+## UTIL Layer (hold NAV + NUM simultaneously)
 
 ```
          ┌─────┬─────┬─────┬─────┬─────┐   ┌─────┬─────┬─────┬─────┬─────┐
@@ -129,11 +131,11 @@ Activated via the SYM layer thumb — it's a standalone layer.
   ┌──────┼─────┼─────┼─────┼─────┼─────┤   ├─────┼─────┼─────┼─────┼─────┼──────┐
   │      │RESET│     │     │     │O_TOG│   │     │     │     │     │     │      │
   └──────┴─────┴─────┼─────┼─────┼─────┤   ├─────┼─────┼─────┼─────┴─────┴──────┘
-                     │     │     │     │   │     │Mute │     │
+                     │     │▓▓▓▓▓│     │   │▓▓▓▓▓│Mute │     │
                      └─────┴─────┴─────┘   └─────┴─────┴─────┘
 ```
 
-- **BOOT** = bootloader mode (for flashing)
+- **BOOT** = bootloader (for flashing)
 - **RESET** = soft reset
 - **BT0-3** = select Bluetooth profile
 - **BTclr** = clear current BT profile
@@ -141,63 +143,55 @@ Activated via the SYM layer thumb — it's a standalone layer.
 
 ---
 
-## Combos (press two keys at the same time)
+## Combos (press two keys simultaneously)
 
 ### Brackets & Parens (right hand, horizontal)
 
 ```
-         Top row:     [ = F+O       ] = O+U
-         Home row:    ( = H+A       ) = A+E
-         Bottom row:  { = P+,       } = ,+.
-         Edges:       < = Y+H       > = E+I
+Top row:     [ = F+O       ] = O+U
+Home row:    ( = H+A       ) = A+E
+Bottom row:  { = P+,       } = ,+.
+Edges:       < = Y+H       > = E+I
 ```
 
-### Symbols (vertical combos — press top+home or home+bottom)
+### Symbols (vertical — press top+home or home+bottom)
 
 ```
-Left hand (top + home row):        Right hand (top + home row):
-  L+R = @                            '+Y = ^
-  D+T = #                            F+H = +
-  W+S = $                            O+A = *
-  Z+G = %                            U+E = &
+Left (top+home):    L+R=@   D+T=#   W+S=$   Z+G=%
+Left (home+bottom): R+X=`   T+M=\   S+C==   G+V=~
 
-Left hand (home + bottom row):     Right hand (home + bottom row):
-  R+X = `                            Y+K = _
-  T+M = \                            H+P = -
-  S+C = =                            A+, = /
-  G+V = ~                            E+. = |
+Right (top+home):   '+Y=^   F+H=+   O+A=*   U+E=&
+Right (home+bottom):Y+K=_   H+P=-   A+,=/   E+.=|
 ```
 
-### Cut / Copy / Paste (left hand bottom row)
+### Cut / Copy / Paste (left bottom row)
 
 ```
-  Copy  = X+M  (positions 22+23)
-  Paste = M+C  (positions 23+24)
-  Cut   = X+C  (positions 22+24)
+Copy  = X+M    Paste = M+C    Cut = X+C
 ```
 
 ### Caps Word
 
-Press **S + H** simultaneously (both index home row keys) to activate caps word.
-Types in ALL CAPS until you press space, enter, or a non-alpha key.
+Press **S + H** (both index home row keys) simultaneously.
 
 ---
 
-## Quick Reference Card
+## Quick Reference
 
 ```
 Layer access:
-  NAV   = hold left middle thumb (Space)
-  SYM   = hold right middle thumb (Bspc)
-  FUN   = hold right outer thumb (Tab)
-  UTIL  = hold NAV + SYM together
-  
+  NAV   = hold left middle thumb  (Space)
+  SYM   = hold left inner thumb   (Tab)
+  NUM   = hold right inner thumb  (Enter)
+  FUN   = hold right middle thumb (Backspace)
+  UTIL  = hold NAV + NUM together
+
 Common needs:
-  Numbers    → NAV layer, left hand
+  Numbers    → NUM layer, left hand (numpad layout)
   Arrows     → NAV layer, right hand
   Symbols    → SYM layer or combos
   F-keys     → FUN layer, left hand
-  Bluetooth  → UTIL layer (NAV+SYM)
+  Bluetooth  → UTIL layer (NAV+NUM)
   Brackets   → combos (two adjacent keys, right hand)
-  Ctrl+C/V/X → combos (left bottom row) or hold N + tap key
+  Shift+key  → use opposite hand's Shift (H or S)
 ```

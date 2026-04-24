@@ -314,7 +314,7 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
-            if-layers = <NAV SYM>;
+            if-layers = <NAV NUM>;
             then-layer = <UTIL>;
         };
     };
@@ -330,12 +330,12 @@
 //          B       L       D       W       Z           '       F       O       U       J
 //          N       R       T       S       G           Y       H       A       E       I
 //  TAB     Q       X       M       C       V           K       P       ,;      .:      ?!      ESC
-//                          DEL     NAV/SPC SHFT        RET     SYM/BSP FUN/TAB
+//                          ESC     NAV/SPC SYM/TAB     NUM/RET FUN/BSP DEL
             bindings = <
                 &kp B       &kp L       &kp D       &kp W       &kp Z           &kp SQT     &kp F       &kp O       &kp U       &kp J
                 &hml LCTRL N &hml LALT R &hml LGUI T &hml LSHFT S &kp G        &kp Y       &hmr RSHFT H &hmr RGUI A &hmr RALT E &hmr RCTRL I
     &kp TAB     &kp Q       &kp X       &kp M       &kp C       &kp V           &kp K       &kp P       &comma_morph &dot_morph  &qexcl      &kp ESC
-                                        &kp DEL   &lt NAV SPACE  &sk LSHFT      &kp RET   &lt SYM BSPC &lt FUN TAB
+                                        &kp ESC   &lt NAV SPACE &lt SYM TAB     &lt NUM RET &lt FUN BSPC &kp DEL
             >;
         };
 
@@ -344,12 +344,12 @@
 //          ---     ---     ---     ---     ---         ---     HOME    UP      END     PG_UP
 //          LCTRL   LALT    LGUI    LSHFT   ---         ---     LEFT    DOWN    RIGHT   PG_DN
 //  ---     ---     ---     ---     ---     ---         ---     ---     ---     ---     ---     ---
-//                          ---     ___     ---         RET     BSPC    DEL
+//                          ESC     ___     TAB         RET     BSPC    DEL
             bindings = <
                 XXX         XXX         XXX         XXX         XXX             XXX         &kp HOME    &kp UP      &kp END     &kp PG_UP
                 &kp LCTRL   &kp LALT    &kp LGUI    &kp LSHFT   XXX             XXX         &kp LEFT    &kp DOWN    &kp RIGHT   &kp PG_DN
     XXX         XXX         XXX         XXX         XXX         XXX             XXX         XXX         XXX         XXX         XXX         XXX
-                                        XXX         ___         XXX             &kp RET     &kp BSPC    &kp DEL
+                                        &kp ESC     ___         &kp TAB         &kp RET     &kp BSPC    &kp DEL
             >;
         };
 
@@ -358,12 +358,12 @@
 //          +       7       8       9       *           ---     ---     ---     ---     ---
 //          0       4       5       6       =           ---     RSHFT   RGUI    RALT    RCTRL
 //  ---     -       1       2       3       /           ---     ---     ---     ---     ---     ---
-//                          .       SPACE   ;           ---     ___     ---
+//                          .       SPACE   ;           ___     BSPC    DEL
             bindings = <
                 &kp PLUS    &kp N7      &kp N8      &kp N9      &kp STAR        XXX         XXX         XXX         XXX         XXX
                 &kp N0      &kp N4      &kp N5      &kp N6      &kp EQUAL       XXX         &kp RSHFT   &kp RGUI    &kp RALT    &kp RCTRL
     XXX         &kp MINUS   &kp N1      &kp N2      &kp N3      &kp FSLH        XXX         XXX         XXX         XXX         XXX         XXX
-                                        &kp DOT     &kp SPACE   &kp SEMI        XXX         ___         XXX
+                                        &kp DOT     &kp SPACE   &kp SEMI        ___         &kp BSPC    &kp DEL
             >;
         };
 
@@ -372,12 +372,12 @@
 //          `       &       *       ---     ---         ---     ---     ---     ---     ---
 //          ~       $       %       ^       ---         ---     RSHFT   RGUI    RALT    RCTRL
 //  ---     |       !       @       #       ---         ---     ---     ---     ---     ---     ---
-//                          (       )       _           ---     ___     ---
+//                          (       )       ___         RET     BSPC    DEL
             bindings = <
                 &kp GRAVE   &kp AMPS    &kp STAR    XXX         XXX             XXX         XXX         XXX         XXX         XXX
                 &kp TILDE   &kp DLLR    &kp PRCNT   &kp CARET   XXX             XXX         &kp RSHFT   &kp RGUI    &kp RALT    &kp RCTRL
     XXX         &kp PIPE    &kp EXCL    &kp AT      &kp HASH    XXX             XXX         XXX         XXX         XXX         XXX         XXX
-                                        &kp LPAR    &kp RPAR    &kp UNDER       XXX         ___         XXX
+                                        &kp LPAR    &kp RPAR    ___             &kp RET     &kp BSPC    &kp DEL
             >;
         };
 
@@ -386,12 +386,12 @@
 //          F12     F7      F8      F9      PSCRN       ---     ---     ---     ---     ---
 //          F11     F4      F5      F6      SLCK        ---     RSHFT   RGUI    RALT    RCTRL
 //  ---     F10     F1      F2      F3      PAUSE       ---     ---     ---     ---     ---     ---
-//                          ---     SPACE   TAB         ---     ---     ___
+//                          APP     SPACE   TAB         ___     BSPC    DEL
             bindings = <
                 &kp F12     &kp F7      &kp F8      &kp F9      &kp PSCRN       XXX         XXX         XXX         XXX         XXX
                 &kp F11     &kp F4      &kp F5      &kp F6      &kp SLCK        XXX         &kp RSHFT   &kp RGUI    &kp RALT    &kp RCTRL
     XXX         &kp F10     &kp F1      &kp F2      &kp F3      &kp PAUSE_BREAK XXX         XXX         XXX         XXX         XXX         XXX
-                                        XXX         &kp SPACE   &kp TAB         XXX         XXX         ___
+                                        &kp K_APP   &kp SPACE   &kp TAB         XXX         XXX         ___
             >;
         };
 
